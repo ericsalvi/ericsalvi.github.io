@@ -27,13 +27,29 @@ h6 {
   margin: 0;
 }
 
-h1 {
-  font-size: 3.2rem;
-}
-
 body {
+  align-items: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    &:last-child {
+      margin-bottom: 70px;
+    }
+    .section-header {
+      h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+      }
+      p {
+        color: $primary;
+        line-height: 24px;
+      }
+    }
+  }
 }
 
 .content-wrapper {
@@ -45,12 +61,13 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  gap: 27px;
+  gap: $gap + 7;
   padding: 93px 60px 74px;
   .header__left {
     align-self: center;
     flex: 1 1 500px;
     h1 {
+      font-size: 3.2rem;
       margin-bottom: 18px;
       span {
         color: $secondary;
@@ -84,6 +101,39 @@ header {
       height: auto;
       max-width: 325px;
       width: 100%;
+    }
+  }
+}
+.portfolio {
+  text-align: center;
+  p {
+    margin-bottom: 50px;
+    width: 50ch;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 400px;
+    a {
+      color: $heading;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-decoration: none;
+      &.active {
+        color: $secondary;
+      }
+    }
+  }
+  .portfolio__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $gap;
+    .portfolio__item {
+      height: 300px;
+      width: 310px;
+      background: $secondary;
     }
   }
 }

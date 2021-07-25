@@ -26,17 +26,45 @@ h6 {
   margin: 0;
 }
 
-h1 {
-  font-size: 3.2rem;
-}
-
 body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 70px;
+}
+
+body section:last-child {
+  margin-bottom: 70px;
+}
+
+body section .section-header h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+body section .section-header p {
+  color: #757575;
+  line-height: 24px;
 }
 
 .content-wrapper {
@@ -64,6 +92,7 @@ header .header__left {
 }
 
 header .header__left h1 {
+  font-size: 3.2rem;
   margin-bottom: 18px;
 }
 
@@ -108,5 +137,51 @@ header .header__right img {
   height: auto;
   max-width: 325px;
   width: 100%;
+}
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio p {
+  margin-bottom: 50px;
+  width: 50ch;
+}
+
+.portfolio ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+  width: 400px;
+}
+
+.portfolio ul a {
+  color: #2b2b2b;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.portfolio ul a.active {
+  color: #ffb400;
+}
+
+.portfolio .portfolio__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.portfolio .portfolio__container .portfolio__item {
+  height: 300px;
+  width: 310px;
+  background: #ffb400;
 }
 /*# sourceMappingURL=styles.css.map */
