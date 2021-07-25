@@ -1,2 +1,3 @@
 # ericsalvi.github.io
-Portfolio for Eric Salvi
+
+Portfolio for Eric Salvi.
