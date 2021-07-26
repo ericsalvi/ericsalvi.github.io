@@ -1,0 +1,122 @@
+@media (min-width: 768px) {
+  body {
+    padding: 0 40px;
+    section {
+      margin-top: 70px;
+      &:last-child {
+        margin-bottom: 70px;
+      }
+      .section-header {
+        h2 {
+          font-size: 1.6rem;
+          font-weight: 600;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .content-wrapper {
+    max-width: $contentW;
+  }
+
+  header {
+    background: url(../images/header-background.svg) white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 41px 94px;
+    .header__left {
+      align-self: center;
+      flex: 1 1 500px;
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 18px;
+      }
+      p {
+        display: block;
+        font-size: 1.07rem;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .portfolio {
+    text-align: center;
+    p {
+      margin-bottom: 50px;
+      width: 50ch;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      width: 400px;
+      a {
+        color: $heading;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+        &.active {
+          color: $secondary;
+        }
+      }
+    }
+    .portfolio__container {
+      grid-template-columns: 1fr 1fr 1fr;
+      .portfolio__item {
+        height: 200px;
+        width: 213px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1135px) {
+  body {
+    padding: 0;
+    section {
+      .section-header {
+        h2 {
+          font-size: 2.13rem;
+        }
+        p {
+          color: $primary;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  header {
+    display: flex;
+    gap: $gap + 7;
+    padding: 93px 60px 74px;
+    text-align: left;
+    .header__left {
+      p {
+        font-size: 1.067rem;
+      }
+    }
+    .header__right {
+      align-self: center;
+      display: block;
+      img {
+        border-radius: 50%;
+        height: auto;
+        max-width: 325px;
+        width: 100%;
+      }
+    }
+  }
+  .portfolio {
+    .portfolio__container {
+      .portfolio__item {
+        height: 300px;
+        width: 310px;
+      }
+    }
+  }
+}
