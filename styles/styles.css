@@ -169,9 +169,9 @@ header .header__right {
 
 .portfolio .portfolio__container .portfolio__item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc(50% - $gap);
-          flex: 1 0 calc(50% - $gap);
-  height: 300px;
+      -ms-flex: 1 0 calc(50% - 20px);
+          flex: 1 0 calc(50% - 20px);
+  height: 210px;
   width: 343px;
   background: #ffb400;
 }
@@ -246,10 +246,8 @@ header .header__right {
   }
   .portfolio .portfolio__container .portfolio__item {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 calc(33% - $gap);
-            flex: 1 0 calc(33% - $gap);
-    height: 200px;
-    width: 213px;
+        -ms-flex: 1 0 calc(33% - 20px);
+            flex: 1 0 calc(33% - 20px);
   }
 }
 
@@ -289,7 +287,6 @@ header .header__right {
   }
   .portfolio .portfolio__container .portfolio__item {
     height: 300px;
-    width: 310px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

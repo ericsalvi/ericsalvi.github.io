@@ -62,9 +62,7 @@
     }
     .portfolio__container {
       .portfolio__item {
-        flex: 1 0 calc(33% - $gap);
-        height: 200px;
-        width: 213px;
+        flex: 1 0 calc(33% - 20px);
       }
     }
   }
@@ -111,7 +109,6 @@
     .portfolio__container {
       .portfolio__item {
         height: 300px;
-        width: 310px;
       }
     }
   }

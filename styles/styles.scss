@@ -123,8 +123,8 @@ header {
     flex-wrap: wrap;
     gap: $gap;
     .portfolio__item {
-      flex: 1 0 calc(50% - $gap);
-      height: 300px;
+      flex: 1 0 calc(50% - 20px);
+      height: 210px;
       width: 343px;
       background: $secondary;
     }
