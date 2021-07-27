@@ -87,7 +87,7 @@ body section .section-header p {
 }
 
 header {
-  background: url(../images/header-background-mobile.png);
+  background: url(../images/header-background-mobile.svg) var(--contrast);
   background-size: cover;
   padding: 62px 85px;
   text-align: center;
