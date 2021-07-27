@@ -16,10 +16,6 @@
     }
   }
 
-  .content-wrapper {
-    max-width: $contentW;
-  }
-
   header {
     background: url(../images/header-background.svg) white;
     background-position: center;
@@ -65,8 +61,8 @@
       }
     }
     .portfolio__container {
-      grid-template-columns: 1fr 1fr 1fr;
       .portfolio__item {
+        flex: 1 0 calc(33%-$gap);
         height: 200px;
         width: 213px;
       }

@@ -54,6 +54,11 @@ body {
   }
 }
 
+.content-wrapper {
+  max-width: $contentW;
+  width: 100%;
+}
+
 header {
   background: url(../images/header-background-mobile.png);
   background-size: cover;
@@ -114,10 +119,11 @@ header {
     }
   }
   .portfolio__container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: $gap;
     .portfolio__item {
+      flex: 1 0 calc(50%-$gap);
       height: 300px;
       width: 343px;
       background: $secondary;

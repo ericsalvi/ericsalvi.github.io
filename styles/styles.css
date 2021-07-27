@@ -69,6 +69,11 @@ body section .section-header p {
   line-height: 24px;
 }
 
+.content-wrapper {
+  max-width: 970px;
+  width: 100%;
+}
+
 header {
   background: url(../images/header-background-mobile.png);
   background-size: cover;
@@ -154,14 +159,18 @@ header .header__right {
 }
 
 .portfolio .portfolio__container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 20px;
 }
 
 .portfolio .portfolio__container .portfolio__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(50%-$gap);
+          flex: 1 0 calc(50%-$gap);
   height: 300px;
   width: 343px;
   background: #ffb400;
@@ -181,9 +190,6 @@ header .header__right {
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 25px;
-  }
-  .content-wrapper {
-    max-width: 970px;
   }
   header {
     background: url(../images/header-background.svg) white;
@@ -238,11 +244,10 @@ header .header__right {
   .portfolio ul a.active {
     color: #ffb400;
   }
-  .portfolio .portfolio__container {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-  }
   .portfolio .portfolio__container .portfolio__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(33%-$gap);
+            flex: 1 0 calc(33%-$gap);
     height: 200px;
     width: 213px;
   }
