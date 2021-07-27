@@ -39,6 +39,23 @@ h6 {
   margin: 0;
 }
 
+.switch {
+  background: var(--contrast);
+  display: grid;
+  height: 80px;
+  place-content: center;
+  position: fixed;
+  right: -60px;
+  transition: right 0.3s ease-in-out;
+  width: 80px;
+  &:hover {
+    right: 0;
+  }
+  & svg path {
+    fill: var(--heading-color);
+  }
+}
+
 body {
   align-items: center;
   background-color: var(--section-background);

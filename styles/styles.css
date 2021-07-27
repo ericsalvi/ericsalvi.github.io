@@ -37,6 +37,27 @@ h6 {
   margin: 0;
 }
 
+.switch {
+  background: var(--contrast);
+  display: -ms-grid;
+  display: grid;
+  height: 80px;
+  place-content: center;
+  position: fixed;
+  right: -60px;
+  -webkit-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+  width: 80px;
+}
+
+.switch:hover {
+  right: 0;
+}
+
+.switch svg path {
+  fill: var(--heading-color);
+}
+
 body {
   -webkit-box-align: center;
       -ms-flex-align: center;
