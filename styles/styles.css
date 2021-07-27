@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  --section-background: #e5e5e5;
+  --heading-color: #2b2b2b;
+  --contrast: white;
+}
+
+.dark {
+  --section-background: #181a1b;
+  --heading-color: #fafafa;
+  --contrast: #252627;
+}
+
 *,
 *::before,
 *::after {
@@ -10,7 +22,6 @@
 }
 
 html {
-  background-color: #e5e5e5;
   color: #757575;
   font-family: "Inter", sans-serif;
   font-size: 15px;
@@ -22,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #2b2b2b;
+  color: var(--heading-color);
   margin: 0;
 }
 
@@ -30,6 +41,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: var(--section-background);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,7 +160,7 @@ header .header__right {
 }
 
 .portfolio ul a {
-  color: #2b2b2b;
+  color: var(--heading-color);
   font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
@@ -192,7 +204,7 @@ header .header__right {
     margin-bottom: 25px;
   }
   header {
-    background: url(../images/header-background.svg) white;
+    background: url(../images/header-background.svg) var(--contrast);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -236,7 +248,7 @@ header .header__right {
     width: 400px;
   }
   .portfolio ul a {
-    color: #2b2b2b;
+    color: var(--heading-color);
     font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;

@@ -5,11 +5,18 @@
 $inter: "Inter", sans-serif;
 
 // Colors
-$bgColor: hsl(0, 0%, 89.8%);
-$heading: hsl(0, 0%, 16.9%);
 $primary: hsl(0, 0%, 46%);
 $secondary: hsl(42.4, 100%, 50%);
-$white: hsl(0, 0%, 100%);
+
+// Light Mode
+$bgColor-light: hsl(0, 0%, 89.8%);
+$heading-light: hsl(0, 0%, 16.9%);
+$contrast-light: hsl(0, 0%, 100%);
+
+// Dark Mode
+$bgColor-dark: hsl(210, 4%, 10%);
+$heading-dark: hsl(0, 0%, 98%);
+$contrast-dark: hsl(210, 3%, 15%);
 
 // Content Parameters
 $contentW: 970px;
