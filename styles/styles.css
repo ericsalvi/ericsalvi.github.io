@@ -39,6 +39,7 @@ h6 {
 
 .switch {
   background: var(--contrast);
+  cursor: pointer;
   display: -ms-grid;
   display: grid;
   height: 80px;
