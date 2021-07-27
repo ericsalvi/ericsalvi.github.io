@@ -62,7 +62,7 @@
     }
     .portfolio__container {
       .portfolio__item {
-        flex: 1 0 calc(33%-$gap);
+        flex: 1 0 calc(33% - $gap);
         height: 200px;
         width: 213px;
       }
