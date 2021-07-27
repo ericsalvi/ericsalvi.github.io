@@ -43,12 +43,12 @@ h6 {
   background: var(--contrast);
   cursor: pointer;
   display: grid;
-  height: 80px;
+  height: 60px;
   place-content: center;
   position: fixed;
-  right: -60px;
+  right: -30px;
   transition: right 0.3s ease-in-out;
-  width: 80px;
+  width: 60px;
   &:hover {
     right: 0;
   }
