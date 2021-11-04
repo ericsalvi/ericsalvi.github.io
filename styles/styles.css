@@ -137,7 +137,11 @@ header .header__left p {
   display: none;
 }
 
-header .header__left .btn {
+header .header__left a {
+  text-decoration: none;
+}
+
+header .header__left a .btn {
   -ms-flex-line-pack: center;
       align-content: center;
   background: #ffb400;
@@ -150,14 +154,75 @@ header .header__left .btn {
   font-weight: 500;
   padding: 16px 32px;
   text-transform: uppercase;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
-header .header__left .btn img {
+header .header__left a .btn img {
   padding-left: 9px;
+}
+
+header .header__left a .btn:hover {
+  opacity: .8;
 }
 
 header .header__right {
   display: none;
+}
+
+.experience {
+  text-align: center;
+}
+
+.experience p {
+  margin-bottom: 50px;
+}
+
+.experience .experience__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.experience .experience__container .experience__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--contrast);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 25px;
+}
+
+.experience .experience__container .experience__item h3 {
+  margin-bottom: 25px;
+}
+
+.experience .experience__container .experience__item ul {
+  color: var(--heading-color);
+  list-style: none;
+}
+
+.experience .experience__container .experience__item ul li + li {
+  padding-top: 15px;
 }
 
 .portfolio {
@@ -210,6 +275,38 @@ header .header__right {
   background: #ffb400;
 }
 
+footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--contrast);
+  color: var(--heading-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 18px;
+}
+
+footer .footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+footer .footer__links a {
+  color: #ffb400;
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 0 40px;
@@ -250,6 +347,11 @@ header .header__right {
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 25px;
+  }
+  .experience .experience__container .experience__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(33% - 20px);
+            flex: 1 0 calc(33% - 20px);
   }
   .portfolio {
     text-align: center;

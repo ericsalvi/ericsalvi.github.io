@@ -38,6 +38,13 @@
       }
     }
   }
+  .experience {
+    .experience__container {
+      .experience__item {
+        flex: 1 0 calc(33% - 20px);
+      }
+    }
+  }
   .portfolio {
     text-align: center;
     p {
