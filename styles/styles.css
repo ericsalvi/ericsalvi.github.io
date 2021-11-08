@@ -307,6 +307,15 @@ footer .footer__links a {
   text-decoration: none;
 }
 
+footer .footer__links svg {
+  height: auto;
+  max-width: 31px;
+}
+
+footer .footer__links svg path {
+  fill: #ffb400;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 0 40px;
@@ -326,8 +335,13 @@ footer .footer__links a {
     background: url(../images/header-background.svg) var(--contrast);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     padding: 41px 94px;
+    -webkit-transition: background-size 0.5s;
+    transition: background-size 0.5s;
+  }
+  header:hover {
+    background-size: 115%;
   }
   header .header__left {
     -ms-flex-item-align: center;

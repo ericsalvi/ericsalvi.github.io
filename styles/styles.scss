@@ -219,6 +219,13 @@ footer {
       color: $secondary;
       text-decoration: none; 
     }
+    svg {
+      height: auto;
+      max-width: 31px;
+      path {
+        fill: $secondary;
+      }
+    }
   }
 }
 

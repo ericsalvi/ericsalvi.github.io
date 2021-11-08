@@ -20,8 +20,12 @@
     background: url(../images/header-background.svg) var(--contrast);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     padding: 41px 94px;
+    transition: background-size 0.5s;
+    &:hover {
+      background-size: 115%;
+    }
     .header__left {
       align-self: center;
       flex: 1 1 500px;
