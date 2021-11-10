@@ -213,6 +213,7 @@ footer {
   justify-content: center;
   padding: 18px;
   .footer__links {
+    align-items: center;
     display: flex;
     gap: 10px;
     a {
@@ -221,7 +222,7 @@ footer {
     }
     svg {
       height: auto;
-      max-width: 31px;
+      max-width: 33px;
       path {
         fill: $secondary;
       }

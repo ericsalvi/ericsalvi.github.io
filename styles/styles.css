@@ -296,6 +296,9 @@ footer {
 }
 
 footer .footer__links {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +312,7 @@ footer .footer__links a {
 
 footer .footer__links svg {
   height: auto;
-  max-width: 31px;
+  max-width: 33px;
 }
 
 footer .footer__links svg path {
