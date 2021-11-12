@@ -49,6 +49,7 @@ h6 {
   -webkit-transition: right 0.3s ease-in-out;
   transition: right 0.3s ease-in-out;
   width: 60px;
+  z-index: 1000;
 }
 
 .switch:hover {
@@ -85,7 +86,6 @@ body section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 50px;
 }
 
 body section:last-child {
@@ -111,6 +111,7 @@ body section .section-header p {
 header {
   background: url(../images/header-background-mobile.svg) var(--contrast);
   background-size: cover;
+  margin-bottom: 50px;
   padding: 62px 85px;
   text-align: center;
 }
@@ -258,6 +259,7 @@ header .header__right {
 }
 
 .portfolio .portfolio__container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,13 +268,59 @@ header .header__right {
   gap: 20px;
 }
 
-.portfolio .portfolio__container .portfolio__item {
+.portfolio .portfolio__container a.portfolio__item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 calc(50% - 20px);
           flex: 1 0 calc(50% - 20px);
-  height: 210px;
-  width: 343px;
+  display: none;
+  height: 200px;
+  position: relative;
+}
+
+.portfolio .portfolio__container a.portfolio__item:hover::before {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.portfolio .portfolio__container a.portfolio__item:hover::after {
+  opacity: 1;
+}
+
+.portfolio .portfolio__container a.portfolio__item.show {
+  display: block;
+}
+
+.portfolio .portfolio__container a.portfolio__item::before {
   background: #ffb400;
+  content: "";
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.portfolio .portfolio__container a.portfolio__item::after {
+  color: #252627;
+  content: "+";
+  display: -ms-grid;
+  display: grid;
+  font-size: 4rem;
+  inset: 0;
+  opacity: 0;
+  place-content: center;
+  position: absolute;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.portfolio .portfolio__container a.portfolio__item img {
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
 }
 
 footer {
@@ -323,9 +371,6 @@ footer .footer__links svg path {
   body {
     padding: 0 40px;
   }
-  body section {
-    margin-top: 70px;
-  }
   body section:last-child {
     margin-bottom: 70px;
   }
@@ -339,6 +384,7 @@ footer .footer__links svg path {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    margin-bottom: 70px;
     padding: 41px 94px;
     -webkit-transition: background-size 0.5s;
     transition: background-size 0.5s;
@@ -397,10 +443,11 @@ footer .footer__links svg path {
   .portfolio ul a.active {
     color: #ffb400;
   }
-  .portfolio .portfolio__container .portfolio__item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 calc(33% - 20px);
-            flex: 1 0 calc(33% - 20px);
+  .portfolio .portfolio__container a.portfolio__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33% - 12px);
+            flex: 0 0 calc(33% - 12px);
+    height: 250px;
   }
 }
 

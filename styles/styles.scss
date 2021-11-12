@@ -49,6 +49,7 @@ h6 {
   right: -30px;
   transition: right 0.3s ease-in-out;
   width: 60px;
+  z-index: 1000;
   &:hover {
     right: 0;
   }
@@ -67,7 +68,6 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     &:last-child {
       margin-bottom: 50px;
     }
@@ -93,6 +93,7 @@ body {
 header {
   background: url(../images/header-background-mobile.svg) var(--contrast);
   background-size: cover;
+  margin-bottom: 50px;
   padding: 62px 85px;
   text-align: center;
   .header__left {
@@ -191,14 +192,52 @@ header {
     }
   }
   .portfolio__container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: $gap;
-    .portfolio__item {
+    a.portfolio__item {
       flex: 1 0 calc(50% - 20px);
-      height: 210px;
-      width: 343px;
-      background: $secondary;
+      display: none;
+      height: 200px;
+      position: relative;
+      &:hover {
+        &::before {
+          cursor: pointer;
+          opacity: .8;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+      &.show {
+        display: block;
+      }
+      &::before {
+        background: $secondary;
+        content: "";
+        inset: 0;
+        opacity: 0;
+        position: absolute;
+        transition: opacity .3s;
+      }
+      &::after {
+        color: $contrast-dark;
+        content: "+";
+        display: grid;
+        font-size: 4rem;
+        inset: 0;
+        opacity: 0;
+        place-content: center;
+        position: absolute;
+        transition: opacity .3s;
+      }
+      img {
+        height: inherit;
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+      }
     }
   }
 }
