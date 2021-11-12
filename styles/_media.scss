@@ -2,7 +2,6 @@
   body {
     padding: 0 40px;
     section {
-      margin-top: 70px;
       &:last-child {
         margin-bottom: 70px;
       }
@@ -21,6 +20,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    margin-bottom: 70px;
     padding: 41px 94px;
     transition: background-size 0.5s;
     &:hover {
@@ -72,8 +72,9 @@
       }
     }
     .portfolio__container {
-      .portfolio__item {
-        flex: 1 0 calc(33% - 20px);
+      a.portfolio__item {
+        flex: 0 0 calc(33% - 12px);
+        height: 250px;
       }
     }
   }
