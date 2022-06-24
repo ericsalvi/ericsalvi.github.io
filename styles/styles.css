@@ -3,12 +3,14 @@ body {
   --section-background: #e5e5e5;
   --heading-color: #2b2b2b;
   --contrast: white;
+  --primary: #757575;
 }
 
 .dark {
   --section-background: #181a1b;
   --heading-color: #fafafa;
   --contrast: #252627;
+  --primary: #fafafa;
 }
 
 *,
@@ -22,7 +24,6 @@ body {
 }
 
 html {
-  color: #757575;
   font-family: "Inter", sans-serif;
   font-size: 15px;
 }
@@ -99,7 +100,7 @@ body section .section-header h2 {
 }
 
 body section .section-header p {
-  color: #757575;
+  color: var(--primary);
   line-height: 24px;
 }
 
@@ -135,6 +136,7 @@ header .header__left h1 span {
 }
 
 header .header__left p {
+  color: var(--primary);
   display: none;
 }
 
@@ -155,8 +157,8 @@ header .header__left a .btn {
   font-weight: 500;
   padding: 16px 32px;
   text-transform: uppercase;
-  -webkit-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 header .header__left a .btn img {
@@ -164,7 +166,7 @@ header .header__left a .btn img {
 }
 
 header .header__left a .btn:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 header .header__right {
@@ -279,7 +281,7 @@ header .header__right {
 
 .portfolio .portfolio__container a.portfolio__item:hover::before {
   cursor: pointer;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .portfolio .portfolio__container a.portfolio__item:hover::after {
@@ -296,8 +298,8 @@ header .header__right {
   inset: 0;
   opacity: 0;
   position: absolute;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .portfolio .portfolio__container a.portfolio__item::after {
@@ -310,8 +312,8 @@ header .header__right {
   opacity: 0;
   place-content: center;
   position: absolute;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .portfolio .portfolio__container a.portfolio__item img {
@@ -459,7 +461,7 @@ footer .footer__links svg path {
     font-size: 2.13rem;
   }
   body section .section-header p {
-    color: #757575;
+    color: var(--primary);
     line-height: 24px;
   }
   header {
