@@ -78,6 +78,14 @@
       }
     }
   }
+  .certification {
+    .certification__container {
+      flex-direction: row;
+      .certification__item {
+        flex: 0 0 33%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1135px) {
