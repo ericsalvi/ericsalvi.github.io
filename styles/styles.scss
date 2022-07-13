@@ -244,6 +244,33 @@ header {
   }
 }
 
+.certification {
+  text-align: center;
+  p {
+    margin-bottom: 50px;
+  }
+  .certification__container {
+    background-color: var(--contrast);
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    .certification__item {
+      align-items: center;
+      display: flex;
+      flex: 0 0 50%;
+      flex-direction: column;
+      justify-content: flex-start;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
 footer {
   align-items: center;
   background-color: var(--contrast);
